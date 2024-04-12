@@ -1,0 +1,22 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    
+    "start": "concurrently --kill-others 'npm run start:be' 'npm run start:fe'",
+    "start:be": "cd ./tic-tac-toe-be && npm start",
+    "start:fe": "cd ./tic-tac-toe-fe && npm start"  ,
+    "test": "npm run test:be && npm run test:fe ",
+    "test:be": "cd ./tic-tac-toe-be && npm test",
+    "test:fe": "cd ./tic-tac-toe-fe && npm test"  ,
+    "npm-all": "bash ./npm-i-all-service.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

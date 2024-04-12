@@ -1,0 +1,1 @@
+export { TicTacStore } from './TicTacStore'

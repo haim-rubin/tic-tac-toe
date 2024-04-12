@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Mandali|Raleway:900&display=swap');
+
+html,
+body {
+  font-family: Mandali, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.center {
+  position: absolute;
+  left: calc(50% - 20rem);
+  text-align: center;
+  margin: 0 auto;
+  width: 40rem;
+  height: 12rem;
+}
+
+.tile {
+  margin: 5%;
+  position: relative;
+}
+
+.tile label,
+.tile div {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  font-family: Raleway, Courier, 'Courier New', Sans, sans-serif;
+  font-weight: bolder;
+}
+
+.tile div {
+  display: none;
+  overflow: hidden;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+}
+
+.tile label:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.tile label::before,
+.tile div::before {
+  color: #000;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7.5vmin;
+  font-weight: bold;
+}
+
+.tile div::before {
+  padding: 100%;
+}
+
+.tile.o label[for$='-o']::before {
+  content: 'O';
+  color: #ffc7b5;
+}
+
+.tile.x label[for$='-x']::before {
+  content: 'X';
+  color: #89dcf6;
+}
+
+.board {
+  width: 50vmin;
+  height: 50vmin;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -30%);
+}
+
+div.x {
+  content: 'X';
+  background: #004974;
+  color: #89dcf6;
+}
+
+div.o {
+  content: 'O';
+  background: #a60011;
+  color: #ffc7b5;
+}
+
+.text-center {
+  text-align: center;
+}
+.title {
+  font-size: 6rem;
+  line-height: 5rem;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.game-over {
+  opacity: 0.6;
+
+  z-index: 3;
+  width: 50vmin;
+  height: 50vmin;
+}
+
+.won-message {
+  z-index: 4;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background: #004974;
+  color: #ffc7b5;
+  height: 4rem;
+  width: 18rem;
+  opacity: 0.9;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.start-new-game {
+  display: block;
+  margin: 0 auto 0 auto;
+
+  font-size: 1.2rem;
+  border: none;
+  color: #fff;
+  background: #004974;
+
+  outline: none;
+  padding: 1rem;
+}
+
+.start-new-game.disabled {
+  opacity: 0.5;
+}
+
+.error-message-wrapper {
+  font-size: 1rem;
+  padding: 0.25rem;
+  width: 15rem;
+  margin: 0.5rem auto;
+}
+.error-message {
+  background: #a60011;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.current-player {
+  width: 12rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 1rem auto;
+}
